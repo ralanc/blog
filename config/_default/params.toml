@@ -9,7 +9,7 @@ logo_width = "150px"
 logo_text = "TechFeed"
 # OpenGraph / Twitter Card metadata
 description = "This is meta description"
-author = "Gethugothemes"
+author = "Ryan Chambers"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 # main sections
 mainSections = ["blog"]

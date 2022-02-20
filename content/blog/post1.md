@@ -1,38 +1,35 @@
 ---
-title: "Hugo and GitHub Pages"
-date: 2021-07-15T11:06:48+06:00
+title: "Making a Blog"
+date: 2022-02-20T11:06:48+06:00
 image: "images/01.jpg"
 featured: true
 categories: ["Development"]
 draft: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Let's build a blog!  In this article we are going to use Hugo to build a site to share our thoughts with the world.  Hugo makes building sites super simple, and we will have a beautiful blog up and running in no time.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### What is Hugo?
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+> Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
+
+Hugo will build a site when you create or modify the content contained with a source directory.  This site can then be hosted on a variety of different platforms allowing you to expose your creation to the world.
+
+The main advantage of Hugo is that it allows you, the creator, to focus on your content rather than the technical details needed to create a secure and stable website.  
+- Allows you to focus on your site content rather than the technical details of building and maintaining a site.
+- Blazing fast build times.
+- Very simple content organization
+- There are hundreds of different themes that you can apply to your site to change how content is presented to your users.
+
+### Prerequisites
+
+Before jumping in there a few things that you will need to do:
+
+-
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Installing Hugo
 
-{{< image src="images/02.jpg" caption="Image Caption" alt="alter-text" height="" width="" position="center" command="fill" option="q90" class="img-fluid" title="Image Title" webp="true" >}}
+The first step
 
-
-### Creative Design
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-- Nam ut rutrum ex venenatis sollicitudin;
-- Aliquam erat volutpat nteger;
-- Excepturi repellendus consequatur quibusda;
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
-
-- Nam ut rutrum ex venenatis sollicitudin;
-- Aliquam erat volutpat nteger;
-- Excepturi repellendus consequatur quibusda;
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+https://gohugo.io/getting-started/installing
