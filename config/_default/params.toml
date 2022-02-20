@@ -44,13 +44,9 @@ icon = "fab fa-facebook-f"
 link = "#"
 
 [[social]]
-icon = "fab fa-twitter"
-link = "#"
+icon = "fab fa-linkedin"
+link = "https://www.linkedin.com/in/ryan-chambers-12021334/"
 
 [[social]]
-icon = "fab fa-instagram"
-link = "#"
-
-[[social]]
-icon = "fab fa-dribbble"
-link = "#"
+icon = "fab fa-github"
+link = "https://github.com/ralanc"

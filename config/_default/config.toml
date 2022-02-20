@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://ralanc.github.io/blog/"
+baseURL = "https://blog.ralanc.us/"
 title = "Techfeed"
 theme = "techfeed-hugo"
 # post pagination
