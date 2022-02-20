@@ -5468,11 +5468,11 @@ button:focus {
   outline: 0; }
 
 a {
-  color: #333333;
+  color: #c8ab77;
   transition: all .3s; }
   a:hover {
     text-decoration: none;
-    color: #c8ab77; }
+    color: #9b7a3e; }
 
 ul, li {
   padding: 0;

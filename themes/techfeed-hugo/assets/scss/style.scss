@@ -7,6 +7,8 @@ $dark: {{.dark | default "#333333"}};
 $gray: {{.gray | default "#f6f6f6"}};
 $body-color: {{.body_color | default "#fff"}};
 $border-color: {{.border_color | default "#ECECEC"}};
+$link: {{.link | default "#c8ab77"}};
+$link-dark: {{.link_dark | default "#c1a065"}};
 
 // Font Variables
 $primary-font: '{{ replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .primary_font | default "Lato"}}', {{.primary_font_type | default "sans-serif"}};

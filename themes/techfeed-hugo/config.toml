@@ -15,7 +15,8 @@ dark = "#333333"
 gray = "#f6f6f6"
 body_color = "#fff"
 border_color = "#ACB9C4"
-
+link = "#c8ab77"
+link_dark = "#9b7a3e"
 
 # font variable
 # Give your font name from google font. add font weight using ":wght@" and separate by ";"

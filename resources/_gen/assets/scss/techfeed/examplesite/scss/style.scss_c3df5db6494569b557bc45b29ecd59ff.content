@@ -5469,7 +5469,7 @@ button:focus {
 
 a {
   color: #333333;
-  transition: all .3s; }
+  transition: ; }
   a:hover {
     text-decoration: none;
     color: #c8ab77; }

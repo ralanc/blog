@@ -31,11 +31,11 @@ button:focus {
  outline: 0;
 }
 a {
-  color: $dark;
+  color: $link;
   transition: all .3s;
   &:hover {
      text-decoration: none;
-     color: $primary-color;
+     color: $link-dark;
   }
 }
 ul, li {
