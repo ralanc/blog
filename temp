@@ -1,0 +1,88 @@
+const { resolve } = require('path');
+const { readdir } = require('fs').promises;
+const fs = require('fs');
+const yaml = require('js-yaml');
+var toml = require('toml');
+var striptags = require('striptags');
+
+const root = 'my-project/docs';
+
+(async () => {
+
+    // Determine if Hugo, MKDocs, Docusaurus, and of course Bergies thing
+    // Hugo - content
+    // MKDocs - docs
+
+    for await (const file of getFiles(root)) {
+        console.log(processFile(file));
+    }
+})();
+
+async function* getFiles(dir) {
+    const dirents = await readdir(dir, { withFileTypes: true });
+    for (const dirent of dirents) {
+        const res = resolve(dir, dirent.name);
+        if (dirent.isDirectory()) {
+            yield* getFiles(res);
+        } else {
+            yield res;
+        }
+    }
+}
+
+
+function processFile(file) {
+    var pageIndex;
+
+    if (file.endsWith(".html")) {
+        //pageIndex = processHTMLFile(abspath, filename);
+    } else if (file.endsWith(".md")) {
+        pageIndex = processMDFile(file);
+    } else {
+        console.warn("blah")
+    }
+
+    return pageIndex;
+};
+
+
+
+function processMDFile(file) {
+
+    let document = fs.readFileSync(file, 'utf8').trim();
+
+    let frontmatter;
+    let content
+
+    if (document.startsWith("---")) {
+        // YAML Front Matter
+        const rawFontmatter = document.substring(3, document.indexOf("---", 3));
+        frontmatter = yaml.load(rawFontmatter);
+        content = document.substring(document.indexOf("---", 3));
+    } else if (document.startsWith("+++")) {
+        // TOML Front Matter
+        const rawFontmatter = document.substring(3, document.indexOf("+++", 3));
+        frontmatter = toml.parse(rawFontmatter);
+        content = document.substring(document.indexOf("+++", 3));
+    } else if (document.startsWith("{")) {
+        // JSON Front Matter
+        const rawFontmatter = document.substring(0, document.indexOf("}") + 1);
+        frontmatter = JSON.parse(rawFontmatter);
+        content = document.substring(document.indexOf("}") + 1);
+    } else {
+        content = document;
+    }
+
+    content = content.trim();
+    content = striptags(content);
+    content = content.replace(/[^\w\s\']|_/g, "").replace(/\s+/g, " ");
+
+    return {
+        title: frontmatter?.title,
+        date: frontmatter?.date,
+        description: frontmatter?.description,
+        tags: frontmatter?.tags,
+        href: file.replace(`${__dirname}/${root}`, "").replace(".md", ""),
+        content: content
+    };
+};
